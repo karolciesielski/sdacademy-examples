@@ -1,10 +1,8 @@
 package pl.sdacademy.downloader;
 
-import java.io.InputStream;
-
 public class Downloader {
     public static void main(String[] args) {
-        CommandLineRunner commandLine = new CommandLineRunner(new FileDownloader());
+        CommandLineRunner commandLine = new CommandLineRunner(new FileDownloader(), new NewThreadExecutor());
         commandLine.run(System.in);
     }
 }
